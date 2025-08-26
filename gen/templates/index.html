@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Motivation Generator</title>
+    <!-- Link to your CSS file for styling. Flask's url_for helps find static files. -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Daily Motivation Generator</h1>
+
+        <div class="input-section">
+            <label for="mood-select">I'm feeling / I need:</label>
+            <!-- Dropdown for selecting mood/situation -->
+            <select id="mood-select">
+                <option value="Feeling Anxious">Feeling Anxious</option>
+                <option value="Need Focus">Need Focus</option>
+                <option value="Feeling Down">Feeling Down</option>
+                <option value="Seeking Inspiration">Seeking Inspiration</option>
+                <option value="Overwhelmed">Overwhelmed</option>
+                <option value="Starting New Project">Starting New Project</option>
+            </select>
+            <button id="generate-btn">Generate Motivation</button>
+        </div>
+
+        <div class="motivation-output">
+            <!-- Paragraph to display the generated motivation response -->
+            <p id="motivation-text">daily motivation will appear here!</p>
+        </div>
+    </div>
+
+    <!-- Linking JavaScript file for interactive logic. -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
